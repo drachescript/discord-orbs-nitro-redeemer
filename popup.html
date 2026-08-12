@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Orbs Nitro Redeemer</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <main>
+    <h1>Orbs Nitro Redeemer</h1>
+    <p class="sub">3-Day Nitro Credit · 1,400 Orbs each</p>
+
+    <label>
+      Credits to redeem
+      <input id="count" type="number" min="1" max="500" step="1" value="1" />
+    </label>
+
+    <label>
+      Delay between actions
+      <select id="delay">
+        <option value="700">0.7 sec</option>
+        <option value="1000">1.0 sec</option>
+        <option value="1300" selected>1.3 sec</option>
+        <option value="1800">1.8 sec</option>
+        <option value="2500">2.5 sec</option>
+      </select>
+    </label>
+
+    <div class="cost" id="cost">Estimated cost: 1,400 Orbs</div>
+
+    <button id="openShop" class="secondary">Open Orbs Shop</button>
+    <div class="row">
+      <button id="start" class="primary">Start</button>
+      <button id="stop" class="danger">Stop</button>
+    </div>
+
+    <section class="statusBox">
+      <div id="status">Idle</div>
+      <div id="progress">0 / 0 redeemed</div>
+    </section>
+
+    <p class="warning">Orb purchases are final. Start with 1 credit first to make sure Discord's current UI matches.</p>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>

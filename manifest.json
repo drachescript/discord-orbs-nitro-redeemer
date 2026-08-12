@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Discord Orbs Nitro Redeemer",
+  "version": "0.1.1",
+  "description": "Manually start a controlled batch redemption of Discord 3-Day Nitro Credits using Orbs.",
+  "permissions": ["activeTab", "storage"],
+  "host_permissions": ["https://discord.com/*"],
+  "action": {
+    "default_title": "Discord Orbs Nitro Redeemer",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://discord.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
